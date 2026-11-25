@@ -36,10 +36,10 @@ SQL (MySQL Workbench)
 
 ##  Data Cleaning Summary
 Before running exploratory queries, both tables were standardized and prepared in MySQL. Key steps completed during the data cleaning process:
+- Fixed Corrupted Column Headers
 - Removed 6 duplicate records
 - Text & Spelling Standardization on the 'State_name' and 'type' columns
 - Handled missing values in the 'place' column
-- Zero-Value Filtering: Excluded invalid `0` entries in `Mean` and `Median` income fields during statistical queries so unreported census tracts do not artificially lower state averages.
 - Checked every other column to make sure the dataset is ready for analysis
 
   🔗 **[View the full Data Cleaning Project Process & before/after](https://github.com/davmaane/US-Household-Income-Project-DC)**
