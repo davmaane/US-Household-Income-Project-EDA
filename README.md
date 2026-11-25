@@ -9,7 +9,7 @@
 * [Tools Used](#Tools-Used)
 * [Featured SQL Skills](#Featured-SQL-Skills)
 * [Data Cleaning Summary](#Data-Cleaning-Summary)
-* [Exploratory Data Analysis(EDA), Queries And Insights](#Exploratory-Data-Analysis(EDA),-Queries-And-Insights)
+* [Exploratory Data Analysis (EDA), Queries And Insights](#Exploratory-Data-Analysis-(EDA),-Queries-And-Insights)
 * [Analytical Note](#Analytical-Note)
 * [Recommendations](#Recommendations)
 * [Limitations](#Limitations)
@@ -46,7 +46,7 @@ Before running exploratory queries, both tables were standardized and prepared i
 
   
 
-## Exploratory Data Analysis(EDA), Queries And Insights
+## Exploratory Data Analysis (EDA), Queries And Insights
 ### Insight 1: Top & Bottom States by Household Income
 Joining the income and statistics tables while filtering out unreported (`0`) records shows clear income gaps across the States.
 ```sql
