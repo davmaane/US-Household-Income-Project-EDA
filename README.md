@@ -5,7 +5,7 @@
 ## Table of Contents
 * [Project Overview](#Project-Overview)
 * [Key Questions Answered](#Key-Questions-Answered)
-* [Dataset-Description](#Dataset-Description)
+* [Dataset Description](#Dataset-Description)
 * [Tools Used](#Tools-Used)
 * [Featured SQL Skills](#Featured-SQL-Skills)
 * [Data Cleaning Summary](#Data-Cleaning-Summary)
@@ -26,7 +26,7 @@ This project focuses on an **SQL Exploratory Data Analysis (EDA)** of the **US H
   
 
 ## Dataset Description
-The datasets sourced from Kaggle, consists of two relational tables which is the income table which contains the income and Geographic dimension and then the statistics table which  contains the Financial metrics like the mean and median. Both tables with over 32,000 rows contain a unique id column which could be used to link both tables to find trends and clear analysis
+The datasets sourced from Kaggle, consists of two relational tables which is the income table which contains the income and Geographic dimension and then the statistics table which contains the Financial metrics like the mean and median. Both tables with over 32,000 rows contain a unique id column which could be used to link both tables to find trends and clear analysis
 
 ## Tools Used
 SQL (MySQL Workbench)
@@ -35,9 +35,9 @@ SQL (MySQL Workbench)
  Multi-table `INNER JOIN`s, Common Table Expressions (CTEs), Window Functions (`RANK()` / `DENSE_RANK()`), Aggregate Functions (`AVG()`, `SUM()`, `COUNT()`, `ROUND()`), `GROUP BY`, and `HAVING` clauses.
 
 ##  Data Cleaning Summary
-Before running exploratory queries, both tables were standardized and prepared in MySQL. All that was done during this data cleaning process:
+Before running exploratory queries, both tables were standardized and prepared in MySQL. Key steps completed during the data cleaning process:
 - Removed 6 duplicate records
-- Text & Spelling Standardization on the 'State_name' and 'type' column
+- Text & Spelling Standardization on the 'State_name' and 'type' columns
 - Handled missing values in the 'place' column
 - Zero-Value Filtering: Excluded invalid `0` entries in `Mean` and `Median` income fields during statistical queries so unreported census tracts do not artificially lower state averages.
 - Checked every other column to make sure the dataset is ready for analysis
@@ -161,11 +161,11 @@ Result:
 
 <img width="616" height="247" alt="image" src="https://github.com/user-attachments/assets/550fa25b-07aa-4ac5-9a5f-b75db5b24a12" />
 
-- While massive states like Texas and California lead in total land area (ALand), smaller compact states such as District of Columbia, New Jersey, and Connecticut consistently rank higher in average household income. Similar with the high water lakefront area (AWater) Michigan, confirming that economic density and industry concentration matter far more than physical land mass.
+- While massive states like Texas and California lead in total land area (ALand), smaller compact states such as District of Columbia, New Jersey, and Connecticut consistently rank higher in average household income. Similar with the high water area (AWater) in states like Michigan, confirming that economic density and industry concentration matter far more than physical land mass.
 
 
 ## Analytical Note 
-While District of Columbia leads all states at over $90,000 average income, individual City  Delta Junction(Alaska) exceed $242,000 because they represent isolated, high-income census tracts with very few records, whereas Alaska's statewide average is balanced out by hundreds of lower-income rural communities.
+While District of Columbia leads all states at over $90,000 average income, individual cities such as Delta Junction (Alaska) exceed $242,000 because they represent isolated, high-income census tracts with very few records, whereas Alaska's statewide average is balanced out by hundreds of lower-income rural communities.
 
 ## Recommendations
 1. **Use Median Income Instead of Average (Mean) for Pricing:** A few ultra-wealthy households pull the average income way up in certain cities. Businesses setting product prices or loan limits should use **Median income** so they don't overestimate what a typical family can actually afford.
