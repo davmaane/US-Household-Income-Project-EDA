@@ -1,6 +1,6 @@
 # US-Household-Income Exploratory Data Analysis (MySQL)
 
-📂 **[SQL Query]([./us_household_income_eda.sql](https://github.com/davmaane/US-Household-Income-Project-EDA/blob/main/US%20Household%20Income%20Project%20EDA.sql)** 
+📂 **[SQL Query](https://github.com/davmaane/US-Household-Income-Project-EDA/blob/main/US%20Household%20Income%20Project%20EDA.sql)** 
 
 ## Table of Contents
 * [Project Overview](#Project-Overview)
