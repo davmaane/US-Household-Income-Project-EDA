@@ -10,7 +10,6 @@
 * [Featured SQL Skills](#Featured-SQL-Skills)
 * [Data Cleaning Summary](#Data-Cleaning-Summary)
 * [Exploratory Data Analysis (EDA), Queries And Insights](#Exploratory-Data-Analysis-EDA-Queries-And-Insights)
-* [Exploratory Data Analysis (EDA), Queries And Insights](#exploratory-data-analysis-eda-queries-and-insights)
 * [Analytical Note](#Analytical-Note)
 * [Recommendations](#Recommendations)
 * [Limitations](#Limitations)
