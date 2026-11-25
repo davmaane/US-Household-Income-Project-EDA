@@ -3,14 +3,16 @@
 📂 **[View the Full Exploratory SQL Script](./us_household_income_eda.sql)** 
 
 ## Table of Contents
-* [Project Overview](#-Project-Overview)
+* [Project Overview](#Project-Overview)
 * [Key Questions Answered](#Key-Questions-Answered)
 * [Dataset-Description](#Dataset-Description)
 * [Tools Used](#Tools-Used)
 * [Featured SQL Skills](#Featured-SQL-Skills)
 * [Data Cleaning Summarry](#Data-Cleaning-Summarry)
-* [7. Recommendations & Business Takeaways](#7-recommendations--business-takeaways)
-* [8. Limitations & Future Scope](#8-limitations--future-scope)
+* [Exploratory Data Analysis (EDA), Queries And Insights](#Exploratory-Data-Analysis-(EDA),-Queries-And-Insights)
+* [Analytical Note](#Analytical-Note)
+* [Recommendations](#Recommendations)
+* [Limitations](#Limitations)
 
 
 ## Project Overview
@@ -164,13 +166,14 @@ Result:
 ## Analytical Note 
 While District of Columbia leads all states at over $90,000 average income, individual City  Delta Junction(Alaska) exceed $242,000 because they represent isolated, high-income census tracts with very few records, whereas Alaska's statewide average is balanced out by hundreds of lower-income rural communities.
 
-## 7. Recommendations & Business Takeaways
-1. **Anchor Pricing Models on Median Income:** Because high-earner outliers inflate `Mean` income in major metro hubs, consumer pricing and affordability models should use **Median household income** as the primary benchmark.
-2. **Prioritize High-Yield Markets:** Businesses launching premium products can target top-ranking states (**[Top 2–3 States from your query]**) for higher average household spending capacity.
-3. **Enforce Sample-Size Thresholds in SQL Reporting:** Always apply `HAVING COUNT(*) > 100` when grouping by granular census classifications (`Type`) so tiny sample sizes do not distort executive summaries.
+## Recommendations
+## Recommendations
+1. **Use Median Income Instead of Average (Mean) for Pricing:** A few ultra-wealthy households pull the average income way up in certain cities. Businesses setting product prices or loan limits should use **Median income** so they don't overestimate what a typical family can actually afford.
+2. **Focus on High-Income Cities, Not Big States:** A physically large state does not mean wealthier residents. Companies launching premium products should target high-earning metro areas (like **District of Columbia, Connecticut, and New Jersey**) rather than choosing markets based on land size.
+3. **Filter Out Empty Rows and Tiny Towns in Future Reports:** Anyone analyzing this census dataset should always exclude `0` income rows and towns with very few records (`COUNT >= 10`) so missing data and isolated outliers don't distort the results.
+
 
 ---
 
-## 8. Limitations 
+## Limitations 
 * Records with `0` values for `Mean` and `Median` income had to be excluded to preserve statistical accuracy.
-* **Future Enhancements:** Joining a **Cost of Living Index (COLI)** table in SQL would allow calculating *adjusted real income*, and connecting this cleaned MySQL database to **Power BI** would enable interactive geographic drill-downs.
