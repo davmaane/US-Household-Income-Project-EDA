@@ -8,7 +8,7 @@
 * [Dataset-Description](#Dataset-Description)
 * [Tools Used](#Tools-Used)
 * [Featured SQL Skills](#Featured-SQL-Skills)
-* [Data Cleaning Summarry](#Data-Cleaning-Summarry)
+* [Data Cleaning Summary](#Data-Cleaning-Summary)
 * [Exploratory Data Analysis (EDA), Queries And Insights](#Exploratory-Data-Analysis-(EDA),-Queries-And-Insights)
 * [Analytical Note](#Analytical-Note)
 * [Recommendations](#Recommendations)
@@ -16,7 +16,7 @@
 
 
 ## Project Overview
-This project focuses on an **SQL Exploratory Data Analysis (EDA)** of the **US Household Income dataset** which contains over 32,000+ US Census records sourced from Kaggle). Using **MySQL**, I joined geographic location tables with household income statistics to uncover state-level wealth disparities, urban-vs-rural earnings gaps, and high-earner income skew across American cities—translating raw census records into clear market-targeting insights.
+This project focuses on an **SQL Exploratory Data Analysis (EDA)** of the **US Household Income dataset** which contains over 32,000+ US Census records. Using **MySQL**, I joined geographic location tables with household income statistics to uncover state-level wealth disparities, urban-vs-rural earnings gaps, and high-earner income skew across American cities—translating raw census records into clear market-targeting insights.
 
 ## Key Questions Answered 
 - Which US states record the highest and lowest average household incomes?
@@ -26,7 +26,7 @@ This project focuses on an **SQL Exploratory Data Analysis (EDA)** of the **US H
   
 
 ## Dataset Description
-The database consists of two relational tables which is the income table which contains the income and Geographic dimension and then the statistics table which  contains the Financial metrics like the mean and median. Both tables with over 32,000 rows contain a unique id column which could be used to link both tables to find trends and clear analysis
+The datasets sourced from Kaggle, consists of two relational tables which is the income table which contains the income and Geographic dimension and then the statistics table which  contains the Financial metrics like the mean and median. Both tables with over 32,000 rows contain a unique id column which could be used to link both tables to find trends and clear analysis
 
 ## Tools Used
 SQL (MySQL Workbench)
@@ -132,9 +132,10 @@ ORDER BY  average_mean DESC;
 
 Result:  
 
+
 <img width="361" height="156" alt="image" src="https://github.com/user-attachments/assets/e829d324-828f-4fc1-9215-478d166a8350" />
 
-- Household earnings vary significantly by community structure. Borough records the highest average household income at $68,594.4, outperforming Town at $55,194.1 This indicates stronger purchasing power concentrated in incorporated suburban and metropolitan census zones compared to smaller rural settlements.
+- Household earnings vary significantly by community structure. Borough records the highest average household income at $68,594.4, outperforming Town at $55,194.1. This indicates stronger purchasing power concentrated in incorporated suburban and metropolitan census zones compared to smaller rural settlements.
 
 ### Insight 4: Land or Water area correlation with average household income?
 Comparing total state land/water area alongside average household income to check whether physically larger states earn more:
@@ -166,7 +167,6 @@ Result:
 ## Analytical Note 
 While District of Columbia leads all states at over $90,000 average income, individual City  Delta Junction(Alaska) exceed $242,000 because they represent isolated, high-income census tracts with very few records, whereas Alaska's statewide average is balanced out by hundreds of lower-income rural communities.
 
-## Recommendations
 ## Recommendations
 1. **Use Median Income Instead of Average (Mean) for Pricing:** A few ultra-wealthy households pull the average income way up in certain cities. Businesses setting product prices or loan limits should use **Median income** so they don't overestimate what a typical family can actually afford.
 2. **Focus on High-Income Cities, Not Big States:** A physically large state does not mean wealthier residents. Companies launching premium products should target high-earning metro areas (like **District of Columbia, Connecticut, and New Jersey**) rather than choosing markets based on land size.
